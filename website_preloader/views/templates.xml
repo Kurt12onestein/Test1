@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_message" inherit_id="website.layout" name="Website Preloader">
+        <xpath expr="//div[@id='wrapwrap']/main" position="before">
+            <t t-if="website.enable_preloader == True">
+                <t t-if="website.theme_mode == 'dark'">
+                    <div id="preloader" style="background-color: #222;">
+                        <div id="loader"></div>
+                    </div>
+                </t>
+                <t t-else="">
+                    <div id="preloader" style="background-color: #fff;">
+                        <div id="loader"></div>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>
